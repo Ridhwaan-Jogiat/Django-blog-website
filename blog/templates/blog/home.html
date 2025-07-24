@@ -12,11 +12,14 @@
             <div class="content-section fixed-box" style="height: 200px;">
                 <h2><a href="{% url 'post-detail' post.pk %}">{{post.title|truncatechars:20}}</a></h2>
                  <p>{{post.content|truncatechars:120}}</p>
-                 <small>{{post.created_at}}</small>
+                 <small>Posted by {{post.author}} at {{post.created_at}} </small>
+                 
             <div class="btn-group-toggle">
-                    
+                {% if request.user == post.author  %}
                     <a href="{% url 'post-update' post.pk %}" class="btn btn-success">Edit</a>
                     <a href="{% url 'post-delete' post.pk %}"  class="btn btn-danger" >Delete <i class="fa fa-trash" aria-hidden="true"></i></a>
+                {% endif %}
+                    
             </div>
             </div>
             
