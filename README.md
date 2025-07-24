@@ -1,6 +1,6 @@
 # Django Blog Website
 
-This is a Django-based blog website that allows users to register, log in, create posts, and manage their content.
+This is a simple Django-based blog website that allows users to register, log in, create posts, and manage their content.
 
 ## Features
 
